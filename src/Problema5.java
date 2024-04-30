@@ -20,6 +20,6 @@ public class Problema5 {
                 noEncuentra = false;
             }
         }
-        System.out.println("Numero positivo mas pequeño: " + numero);
+        System.out.println("Numero positivo mas pequeñoo: " + numero);
     }   
 }
