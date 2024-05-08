@@ -6,18 +6,18 @@ public class Problema3 {
 
         double n = 600_851_475_143.0;
         double factor = 0;
-        boolean bandera;
 
-        for (double i = 1; i <= n; i++) {
-            bandera = true;
+        for (double i = 2; i <= Math.sqrt(n); i++) {
             if (n % i == 0) {
+                boolean esPrimo = true;
                 System.out.println("Factor encontrado: " + i);
-                for (double j = 2; j < i; j++) {
+                for (double j = 2; j <= Math.sqrt(i); j++) {
                     if (i % j == 0) {
-                        bandera = false;
+                        esPrimo = false;
+                        break;
                     }
                 }
-                if (bandera) {
+                if (esPrimo) {
                     System.out.println("Factor primo encontrado: " + i);
                     factor = i;
                 }
